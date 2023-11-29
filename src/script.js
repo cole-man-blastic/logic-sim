@@ -1,9 +1,14 @@
 window.alert("JS Working");
 
-/** @type {HTMLCanvasElement} */
-const c = document.getElementById("render-canvas");
-const ctx = c.getContext("2d");
-update();
+const c;
+const ctx;
+
+document.onload = (() => {
+    /** @type {HTMLCanvasElement} */
+    c = document.getElementById("render-canvas");
+    ctx = c.getContext("2d");
+    update();
+});
 
 function update() {
     ctx.fillStyle = "red";
