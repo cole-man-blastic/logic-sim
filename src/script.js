@@ -1,5 +1,3 @@
-window.alert("JS Working");
-
 const c;
 const ctx;
 
