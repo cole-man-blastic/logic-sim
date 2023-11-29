@@ -1,3 +1,3 @@
-const c = document.getElementsByTagName("canvas")[0];
+/** @type {HTMLCanvasElement} */
+const c = document.getElementById("render-canvas");
 const ctx = c.getContext("2d");
-
