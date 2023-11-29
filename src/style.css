@@ -1,6 +1,12 @@
-html * {
+html, * {
     margin: 0;
 }
+html, body 
+{ 
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    }
 #render-canvas {
     width: 100vw;
     height: 100vh;
