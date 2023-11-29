@@ -1,3 +1,4 @@
+alert("js working");
 function run() {
     /** @type {HTMLCanvasElement} */
     const c = document.getElementById("render-canvas");
