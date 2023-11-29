@@ -1,6 +1,9 @@
-/** @type {HTMLCanvasElement} */
-const c = document.getElementById("render-canvas");
-const ctx = c.getContext("2d");
+function run() {
+    /** @type {HTMLCanvasElement} */
+    const c = document.getElementById("render-canvas");
+    const ctx = c.getContext("2d");
+    update();
+}
 
 function update() {
     ctx.fillStyle = "red";
@@ -9,5 +12,3 @@ function update() {
     c.height = window.innerHeight;
     requestAnimationFrame(update);
 }
-update();
-
