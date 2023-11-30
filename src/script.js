@@ -10,9 +10,9 @@ document.onload = (() => {
 });
 
 function update() {
-    ctx.fillStyle = "red";
-    ctx.fillRect(100, 100, 100, 100);
     c.width = window.innerWidth;
     c.height = window.innerHeight;
+    ctx.fillStyle = "red";
+    ctx.fillRect(100, 100, 100, 100);
     requestAnimationFrame(update);
 }
