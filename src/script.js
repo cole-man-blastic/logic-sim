@@ -2,6 +2,7 @@ const c;
 const ctx;
 
 document.onload = (() => {
+    alert("document loaded");
     /** @type {HTMLCanvasElement} */
     c = document.getElementById("render-canvas");
     ctx = c.getContext("2d");
