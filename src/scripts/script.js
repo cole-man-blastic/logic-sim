@@ -19,7 +19,7 @@ function update() {
         ctx.lineTo(c.width, y);
     }
     ctx.lineWidth = 4;
-    ctx.strokeStyle = "rgb(47, 47, 47)";
+    ctx.strokeStyle = "rgb(39, 39, 39)";
     ctx.stroke();
     ctx.closePath();
     requestAnimationFrame(update);
