@@ -11,13 +11,12 @@ function update() {
     c.height = window.innerHeight;
     ctx.strokeStyle = "rgb(63, 63, 63)";
     ctx.lineWidth = 4;
+    ctx.beginPath();
     for (x = -2; x < c.width + 2; x += GRID_SIZE) {
-        ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, c.height);
     }
     for (y = -2; y < c.height + 2; y += GRID_SIZE) {
-        ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(c.width, y);
     }
