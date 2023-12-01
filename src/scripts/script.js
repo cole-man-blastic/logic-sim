@@ -6,8 +6,6 @@ const GRID_SIZE = 32
 
 let camX = 0, camY = 0;
 
-let chip = new Chip(new ChipType(1, 2, 3, "red", 0), 2, 4);
-
 update();
 
 function update() {
@@ -25,38 +23,6 @@ function update() {
     ctx.lineWidth = 4;
     ctx.strokeStyle = "rgb(39, 39, 39)";
     ctx.stroke();
-    ctx.closePath();
-    chip.draw();
+    //ctx.closePath();
     requestAnimationFrame(update);
-}
-
-class ChipType {
-    constructor(inCount, outCount, width, color, evaluationFunction) {
-        this.inConnections = Array(inCount).fill(new Connection(true));
-        this.outConnections = Array(outCount).fill(new Connection(false));
-        this.width = width;
-        this.height = Math.max(inCount, outCount) + 1;
-        this.color = color;
-        this.evaluate = evaluationFunction;
-    }
-}
-
-class Chip {
-    constructor(chipType, x, y) {
-        this.chipType = chipType;
-        this.x = x;
-        this.y = y;
-    }
-
-    draw() {
-        ctx.fillStyle = this.chipType.color;
-        ctx.fillRect(x * GRID_SIZE, y * GRID_SIZE, this.chipType.width * GRID_SIZE, this.chipType.height * GRID_SIZE);
-    }
-}
-
-class Connection {
-    #isInput;
-    constructor(isInput) {
-        this.#isInput = isInput;
-    }
 }
