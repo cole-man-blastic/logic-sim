@@ -4,17 +4,21 @@ const ctx = c.getContext("2d");
 
 const GRID_SIZE = 32
 
+let camX = 0, camY = 0;
+
 update();
 
 function update() {
+    camX++;
+    camY++;
     c.width = window.innerWidth;
     c.height = window.innerHeight;
     ctx.beginPath();
-    for (x = -2; x < c.width + 2; x += GRID_SIZE) {
+    for (x = camX % 32 - 32; x < c.width + 2; x += GRID_SIZE) {
         ctx.moveTo(x, 0);
         ctx.lineTo(x, c.height);
     }
-    for (y = -2; y < c.height + 2; y += GRID_SIZE) {
+    for (y = camY % 32 - 32; y < c.height + 2; y += GRID_SIZE) {
         ctx.moveTo(0, y);
         ctx.lineTo(c.width, y);
     }
