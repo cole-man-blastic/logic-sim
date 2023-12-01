@@ -2,7 +2,7 @@
 const c = document.getElementById("render-canvas");
 const ctx = c.getContext("2d");
 
-const GRID_SIZE = 256
+const GRID_SIZE = 32
 
 update();
 
