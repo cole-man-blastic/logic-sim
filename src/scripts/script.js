@@ -8,6 +8,7 @@ update();
 
 function update() {
     c.width = window.innerWidth;
+    c.height = window.innerHeight;
     ctx.strokeStyle = "rgb(63, 63, 63)";
     ctx.lineWidth = 4;
     for (x = -2; x < c.width + 2; x += GRID_SIZE) {
@@ -36,6 +37,6 @@ class ChipTemplate {
 class Connection {
     #isInput;
     constructor(isInput) {
-        #isInput = isInput;
+        this.#isInput = isInput;
     }
 }
