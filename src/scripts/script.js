@@ -6,7 +6,7 @@ const GRID_SIZE = 32
 
 let camX = 0, camY = 0;
 
-let chip = new Chip(new ChipType(1, 2, null), 2, 4);
+let chip = new Chip(new ChipType(1, 2, 0), 2, 4);
 
 update();
 
