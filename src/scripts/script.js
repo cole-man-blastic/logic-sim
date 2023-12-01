@@ -14,16 +14,14 @@ function update() {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, c.height);
-        ctx.stroke();
-        ctx.closePath();
     }
     for (y = -2; y < c.height + 2; y += GRID_SIZE) {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(c.width, y);
-        ctx.stroke();
-        ctx.closePath();
     }
+    ctx.stroke();
+    ctx.closePath();
     requestAnimationFrame(update);
 }
 
