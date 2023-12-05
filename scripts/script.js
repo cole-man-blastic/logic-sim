@@ -21,7 +21,7 @@ function update() {
         ctx.lineTo(c.width, y);
     }
     ctx.lineWidth = 4;
-    ctx.strokeStyle = "rgb(39, 39, 39)";
+    ctx.strokeStyle = "rgb(40, 40, 40)";
     ctx.stroke();
     //ctx.closePath();
     requestAnimationFrame(update);
