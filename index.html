@@ -5,8 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Logic Sim</title>
-    <link rel="stylesheet" href="./src/style.css">
-    <link rel="icon" type="image/x-icon" href="./src/favicon.ico">
+    <style>
+      html, * {
+          margin: 0;
+      }
+      html, body { 
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
+      }
+      #render-canvas {
+          width: 100%;
+          height: 100%;
+          background-color: rgb(31, 31, 31);
+      }
+    </style>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
   </head>
   <body>
     <canvas id="render-canvas"></canvas>
