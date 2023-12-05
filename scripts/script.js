@@ -11,7 +11,6 @@ update();
 function update() {
     c.width = window.innerWidth;
     c.height = window.innerHeight;
-    ctx.beginPath();
     for (x = (2 - camX) % GRID_SIZE - 2; x < c.width + 2; x += GRID_SIZE) {
         ctx.moveTo(x, 0);
         ctx.lineTo(x, c.height);
@@ -23,6 +22,5 @@ function update() {
     ctx.lineWidth = 4;
     ctx.strokeStyle = "rgb(40, 40, 40)";
     ctx.stroke();
-    //ctx.closePath();
     requestAnimationFrame(update);
 }
