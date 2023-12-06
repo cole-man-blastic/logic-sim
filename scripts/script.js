@@ -7,7 +7,6 @@ const GRID_SIZE = 32
 let camX = 0, camY = 0;
 
 let isMouseDrag = false;
-let mouseX, mouseY;
 c.addEventListener("mousedown", e => isMouseDrag = true);
 c.addEventListener("mouseup", e => isMouseDrag = false);
 c.addEventListener("mousemove", e => {
@@ -17,15 +16,6 @@ c.addEventListener("mousemove", e => {
     }
     mouseX = e.clientX;
     mouseY = e.clientY;
-});
-c.addEventListener("touchmove", e => {  
-    if (e.touches.length = 1) {
-        camX += (mouseX - e.touches[0].clientX);
-        camY += (mouseY - e.touches[0].clientY);
-        mouseX = e.touches[0].clientX;
-        mouseY = e.touches[0].clientY;
-        e.touches[0].x
-    }
 });
 
 update();
