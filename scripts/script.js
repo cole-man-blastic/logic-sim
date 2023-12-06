@@ -8,9 +8,19 @@ let camX = 0, camY = 0;
 
 let isDraggingBackground = false;
 let mouseX, mouseY;
-c.addEventListener("pointerdown", e => isDraggingBackground = true);
-c.addEventListener("pointerup", e => isDraggingBackground = false);
-c.addEventListener("pointermove", e => {
+c.addEventListener("mousedown", e => isDraggingBackground = true);
+c.addEventListener("mouseup", e => isDraggingBackground = false);
+c.addEventListener("mousemove", e => {
+    if (isDraggingBackground) {
+        camX += (mouseX - e.clientX);
+        camY += (mouseY - e.clientY);
+    }
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+c.addEventListener("touchstart", e => isDraggingBackground = true);
+c.addEventListener("touchend", e => isDraggingBackground = false);
+c.addEventListener("touchmove", e => {
     if (isDraggingBackground) {
         camX += (mouseX - e.clientX);
         camY += (mouseY - e.clientY);
