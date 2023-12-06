@@ -18,10 +18,6 @@ c.addEventListener("mousemove", e => {
     mouseX = e.clientX;
     mouseY = e.clientY;
 });
-c.addEventListener("touchmove", e => {
-    camX -= e;
-    camY -= e.movementY;
-});
 
 update();
 
