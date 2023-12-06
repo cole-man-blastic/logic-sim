@@ -6,9 +6,11 @@ const GRID_SIZE = 32
 
 let camX = 0, camY = 0;
 
-let isMouseDrag = true;
+let isBackgroundDrag = true;
+onpointerdown = e => isBackgroundDrag = true;
+onpointerup = e => isBackgroundDrag = false;
 onpointermove = e => {
-    if (isMouseDrag) {
+    if (isBackgroundDrag) {
         camX -= e.movementX;
         camY -= e.movementY;
     }
