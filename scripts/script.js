@@ -12,8 +12,8 @@ c.addEventListener("mousedown", e => isDraggingBackground = true);
 c.addEventListener("mouseup", e => isDraggingBackground = false);
 c.addEventListener("mousemove", e => {
     if (isDraggingBackground) {
-        camX += e.clientX - mouseX;
-        camY += e.clientY - mouseY;
+        camX -= e.clientX - mouseX;
+        camY -= e.clientY - mouseY;
     }
     mouseX = e.clientX;
     mouseY = e.clientY;
