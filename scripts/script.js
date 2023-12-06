@@ -13,7 +13,7 @@ c.addEventListener("mouseup", e => isMouseDrag = false);
 c.addEventListener("mousemove", e => {
     if (isMouseDrag) {
         camX -= e.movementX;
-        camY -= e.movementX;
+        camY -= e.movementY;
     }
     mouseX = e.clientX;
     mouseY = e.clientY;
