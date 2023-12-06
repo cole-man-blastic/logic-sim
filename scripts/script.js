@@ -6,14 +6,18 @@ const GRID_SIZE = 32
 
 let camX = 0, camY = 0;
 
-let mouseDown = false;
-c.addEventListener("mousedown", e => mouseDown = true);
-c.addEventListener("mouseup", e => mouseDown = false);
+let isDraggingBackground = false;
+c.addEventListener("mousedown", e => isDraggingBackground = true);
+c.addEventListener("mouseup", e => isDraggingBackground = false);
 c.addEventListener("mousemove", e => {
-    if (mouseDown) {
+    if (isDraggingBackground) {
         camX -= e.movementX;
         camY -= e.movementY;
     }
+});
+c.addEventListener("wheel", e => {
+    camX -= e.movementX;
+    camY -= e.movementY;
 });
 
 update();
