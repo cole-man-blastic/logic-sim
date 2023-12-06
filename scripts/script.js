@@ -6,11 +6,28 @@ const GRID_SIZE = 32
 
 let camX = 0, camY = 0;
 
+let mouseDown = false;
+c.addEventListener("mousedown", e => mouseDown = true);
+c.addEventListener("mouseup", e => mouseDown = false);
+c.addEventListener("mousemove", e => {
+    if (mouseDown) {
+        camX += e.movementX;
+        camY += e.movementY;
+    }
+});
+
 update();
 
 function update() {
     c.width = window.innerWidth;
     c.height = window.innerHeight;
+
+    draw();
+    
+    requestAnimationFrame(update);
+}
+
+function draw() {
     for (x = (2 - camX) % GRID_SIZE - 2; x < c.width + 2; x += GRID_SIZE) {
         ctx.moveTo(x, 0);
         ctx.lineTo(x, c.height);
@@ -22,5 +39,4 @@ function update() {
     ctx.lineWidth = 4;
     ctx.strokeStyle = "rgb(40, 40, 40)";
     ctx.stroke();
-    requestAnimationFrame(update);
 }
