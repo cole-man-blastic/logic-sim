@@ -11,8 +11,8 @@ c.addEventListener("mousedown", e => mouseDown = true);
 c.addEventListener("mouseup", e => mouseDown = false);
 c.addEventListener("mousemove", e => {
     if (mouseDown) {
-        camX += e.movementX;
-        camY += e.movementY;
+        camX -= e.movementX;
+        camY -= e.movementY;
     }
 });
 
