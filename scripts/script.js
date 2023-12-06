@@ -12,7 +12,7 @@ c.addEventListener("mouseup", e => isDraggingBackground = false);
 c.addEventListener("mousemove", e => {
     if (isDraggingBackground) {
         camX -= e.movementX;
-        camY -= e.movementY;
+        camY -= e.movementX;
     }
 });
 c.addEventListener("wheel", e => {
