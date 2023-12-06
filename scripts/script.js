@@ -12,8 +12,8 @@ c.addEventListener("mousedown", e => isMouseDrag = true);
 c.addEventListener("mouseup", e => isMouseDrag = false);
 c.addEventListener("mousemove", e => {
     if (isMouseDrag) {
-        camX += (mouseX - e.clientX);
-        camY += (mouseY - e.clientY);
+        camX -= e.movementX;
+        camY -= e.movementX;
     }
     mouseX = e.clientX;
     mouseY = e.clientY;
@@ -24,6 +24,7 @@ c.addEventListener("touchmove", e => {
         camY += (mouseY - e.touches[0].clientY);
         mouseX = e.touches[0].clientX;
         mouseY = e.touches[0].clientY;
+        e.touches[0].x
     }
 });
 
