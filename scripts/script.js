@@ -8,7 +8,7 @@ let camX = 0, camY = 0;
 
 let isMouseDrag = false;
 c.addEventListener("pointerdown", e => isMouseDrag = true);
-c.addEventListener("pointerup", e => isMouseDrag = false);
+//c.addEventListener("pointerup", e => isMouseDrag = false);
 c.addEventListener("pointermove", e => {
     if (isMouseDrag) {
         camX -= e.movementX;
