@@ -6,27 +6,25 @@ const GRID_SIZE = 32
 
 let camX = 0, camY = 0;
 
-let isDraggingBackground = false;
+let isMouseDrag = false;
 let mouseX, mouseY;
-c.addEventListener("mousedown", e => isDraggingBackground = true);
-c.addEventListener("mouseup", e => isDraggingBackground = false);
+c.addEventListener("mousedown", e => isMouseDrag = true);
+c.addEventListener("mouseup", e => isMouseDrag = false);
 c.addEventListener("mousemove", e => {
-    if (isDraggingBackground) {
+    if (isMouseDrag) {
         camX += (mouseX - e.clientX);
         camY += (mouseY - e.clientY);
     }
     mouseX = e.clientX;
     mouseY = e.clientY;
 });
-c.addEventListener("touchstart", e => isDraggingBackground = true);
-c.addEventListener("touchend", e => isDraggingBackground = false);
-c.addEventListener("touchmove", e => {
-    if (isDraggingBackground) {
+c.addEventListener("touchmove", e => {  
+    if (e.touches.length = 1) {
         camX += (mouseX - e.touches[0].clientX);
         camY += (mouseY - e.touches[0].clientY);
+        mouseX = e.touches[0].clientX;
+        mouseY = e.touches[0].clientY;
     }
-    mouseX = e.clientX;
-    mouseY = e.clientY;
 });
 
 update();
