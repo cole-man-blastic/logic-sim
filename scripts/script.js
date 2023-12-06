@@ -22,8 +22,8 @@ c.addEventListener("touchstart", e => isDraggingBackground = true);
 c.addEventListener("touchend", e => isDraggingBackground = false);
 c.addEventListener("touchmove", e => {
     if (isDraggingBackground) {
-        camX += (mouseX - e.clientX);
-        camY += (mouseY - e.clientY);
+        camX += (mouseX - e.touches[0].clientX);
+        camY += (mouseY - e.touches[0].clientY);
     }
     mouseX = e.clientX;
     mouseY = e.clientY;
