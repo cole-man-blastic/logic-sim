@@ -1,3 +1,5 @@
+import grid from "/scripts/grid.js"
+
 /** @type {HTMLCanvasElement} */
 const c = document.getElementById("render-canvas");
 const ctx = c.getContext("2d");
