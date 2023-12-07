@@ -1,4 +1,4 @@
-import grid from "/scripts/grid.js"
+import Grid from "./scripts/grid.js";
 
 /** @type {HTMLCanvasElement} */
 const c = document.getElementById("render-canvas");
