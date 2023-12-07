@@ -1,3 +1,5 @@
+alert("ok");
+
 import Grid from "./scripts/grid.js";
 
 /** @type {HTMLCanvasElement} */
