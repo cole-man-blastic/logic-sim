@@ -2,18 +2,15 @@
 const c = document.getElementById("render-canvas");
 const ctx = c.getContext("2d");
 
-const GRID_SIZE = 32
+const GRID_SIZE = 32;
+const LINE_THICKNESS = 2;
 
-let camX = 0, camY = 0;
+let camX = 0, camY = 0, zoom = 1;
 
 let isBackgroundDrag = false;
-onpointerdown = e => {
-    isBackgroundDrag = true;
-    camX -= e.movementX;
-    camY -= e.movementY;
-}
-onpointerup = e => isBackgroundDrag = false;
-onpointermove  = e => {
+onmousedown = e => isBackgroundDrag = true;
+onmouseup = e => isBackgroundDrag = false;
+onmousemove  = e => {
     if (isBackgroundDrag) {
         camX -= e.movementX;
         camY -= e.movementY;
@@ -32,11 +29,11 @@ function update() {
 }
 
 function draw() {
-    for (x = (2 - camX) % GRID_SIZE - 2; x < c.width + 2; x += GRID_SIZE) {
+    for (x = (LINE_THICKNESS - camX) % (GRID_SIZE * zoom) - LINE_THICKNESS; x < c.width + LINE_THICKNESS; x += GRID_SIZE * zoom) {
         ctx.moveTo(x, 0);
         ctx.lineTo(x, c.height);
     }
-    for (y = (2 - camY) % GRID_SIZE - 2; y < c.height + 2; y += GRID_SIZE) {
+    for (y = (LINE_THICKNESS - camY) % (GRID_SIZE * zoom) - LINE_THICKNESS; y < c.height + LINE_THICKNESS; y += GRID_SIZE * zoom) {
         ctx.moveTo(0, y);
         ctx.lineTo(c.width, y);
     }
