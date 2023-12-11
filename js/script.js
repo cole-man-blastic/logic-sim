@@ -3,7 +3,7 @@ const c = document.getElementById("render-canvas");
 const ctx = c.getContext("2d");
 
 const cam = {
-    pos: new V2D(),
+    pos: new V2D(0, 0),
     zoom: 1
 }
 
@@ -49,7 +49,7 @@ function update() {
 class V2D {
     /** @param {number} x @param {number} y */
     constructor(x, y) {
-        this.x = 0//(typeof x !== "undefined") ? x : 0;
-        this.y = 0//(typeof y !== "undefined") ? y : 0;
+        this.x = (typeof x !== "undefined") ? x : 0;
+        this.y = (typeof y !== "undefined") ? y : 0;
     }
 }
