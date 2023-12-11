@@ -15,6 +15,8 @@ const cam = {
     zoom: 1
 }
 
+alert("ok so far")
+
 const grid = {
     gridSize: 32,
     lineWidth: 4,
