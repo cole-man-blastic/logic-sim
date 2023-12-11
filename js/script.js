@@ -9,13 +9,13 @@ class V2D {
         this.y = y;
     }
 
-    orgin() {
+    static orgin() {
         return new V2D(0, 0);
     }
 }
 
 const cam = {
-    pos: new V2D(),
+    pos: V2D.orgin(),
     zoom: 1
 }
 
