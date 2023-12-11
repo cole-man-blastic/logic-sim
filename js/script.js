@@ -13,9 +13,7 @@ class V2D {
 const cam = {
     pos: new V2D(0, 0),
     zoom: 1
-}
-
-alert("ok so far")
+};
 
 const grid = {
     gridSize: 32,
