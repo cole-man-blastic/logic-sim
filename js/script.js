@@ -3,7 +3,7 @@ const c = document.getElementById("render-canvas");
 const ctx = c.getContext("2d");
 
 const cam = {
-    pos: new V2D(0, 0),
+    pos: new V2D(),
     zoom: 1
 }
 
@@ -11,14 +11,8 @@ const grid = {
     gridSize: 32,
     lineWidth: 4,
     draw: function() {
-        for (x = (this.lineWidth - cam.pos.x) % (this.gridSize * cam.zoom) - this.lineWidth; x < c.width + this.lineWidth; x += this.gridSize * cam.zoom) {
-            ctx.moveTo(x, 0);
-            ctx.lineTo(x, c.height);
-        }
-        for (y = (this.lineWidth - cam.pos.y) % (this.gridSize * cam.zoom) - this.lineWidth; y < c.height + this.lineWidth; y += this.gridSize * cam.zoom) {
-            ctx.moveTo(0, y);
-            ctx.lineTo(c.width, y);
-        }
+        ctx.moveTo(10, 10);
+        ctx.lineTo(32, 24);
         ctx.lineWidth = this.lineWidth;
         ctx.strokeStyle = "rgb(40, 40, 40)";
         ctx.stroke();
