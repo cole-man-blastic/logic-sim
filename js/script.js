@@ -9,7 +9,7 @@ const cam = {
 
 const grid = {
     gridSize: 32,
-    lineWidth: 2,
+    lineWidth: 4,
     draw: function() {
         for (x = (this.lineWidth - camX) % (this.gridSize * zoom) - this.lineWidth; x < c.width + this.lineWidth; x += this.gridSize * zoom) {
             ctx.moveTo(x, 0);
@@ -19,7 +19,7 @@ const grid = {
             ctx.moveTo(0, y);
             ctx.lineTo(c.width, y);
         }
-        ctx.lineWidth = 4;
+        ctx.lineWidth = this.lineWidth;
         ctx.strokeStyle = "rgb(40, 40, 40)";
         ctx.stroke();
     }
