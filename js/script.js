@@ -3,7 +3,7 @@ const c = document.getElementById("render-canvas");
 const ctx = c.getContext("2d");
 
 const cam = {
-    pos: new V2D(),
+    pos: new V2D(0, 0),
     zoom: 1
 }
 
