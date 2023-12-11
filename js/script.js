@@ -49,7 +49,6 @@ function update() {
 class V2D {
     /** @param {number} x @param {number} y */
     constructor(x, y) {
-        if(typeof x !== "undefined") {this.x = x;} else {this.x = 0;}
-        if(typeof y !== "undefined") {this.y = y;} else {this.y = 0;}
-    }
+        this.x = (typeof x !== "undefined") ? x : 0;
+        this.y = (typeof y !== "undefined") ? y : 0;
 }
