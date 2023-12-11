@@ -3,10 +3,15 @@ const c = document.getElementById("render-canvas");
 const ctx = c.getContext("2d");
 
 class V2D {
+    constructor() {
+        this.x = 0;
+        this.y = 0;
+    }
+
     /** @param {number} x @param {number} y */
     constructor(x, y) {
-        this.x = (typeof x !== "undefined") ? x : 0;
-        this.y = (typeof y !== "undefined") ? y : 0;
+        this.x = x;
+        this.y = y;
     }
 }
 
