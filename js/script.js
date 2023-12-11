@@ -19,6 +19,8 @@ const grid = {
     }
 }
 
+alert("not that")
+
 let isBackgroundDrag = false;
 onmousedown = e => isBackgroundDrag = true;
 onmouseup = e => isBackgroundDrag = false;
