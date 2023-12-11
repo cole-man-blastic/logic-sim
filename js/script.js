@@ -11,11 +11,11 @@ const grid = {
     gridSize: 32,
     lineWidth: 2,
     draw: function() {
-        for (x = (LINE_THICKNESS - camX) % (GRID_SIZE * zoom) - LINE_THICKNESS; x < c.width + LINE_THICKNESS; x += GRID_SIZE * zoom) {
+        for (x = (this.lineWidth - camX) % (this.gridSize * zoom) - this.lineWidth; x < c.width + this.lineWidth; x += this.gridSize * zoom) {
             ctx.moveTo(x, 0);
             ctx.lineTo(x, c.height);
         }
-        for (y = (LINE_THICKNESS - camY) % (GRID_SIZE * zoom) - LINE_THICKNESS; y < c.height + LINE_THICKNESS; y += GRID_SIZE * zoom) {
+        for (y = (this.lineWidth - camY) % (this.gridSize * zoom) - this.lineWidth; y < c.height + this.lineWidth; y += this.gridSize * zoom) {
             ctx.moveTo(0, y);
             ctx.lineTo(c.width, y);
         }
