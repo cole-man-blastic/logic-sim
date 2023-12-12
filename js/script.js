@@ -42,14 +42,14 @@ onmousedown = e => isBackgroundDrag = true;
 onmouseup = e => isBackgroundDrag = false;
 onmousemove  = e => {
     if (isBackgroundDrag) {
-        cam.pos.x += e.movementX;
-        cam.pos.y += e.movementY;
+        cam.pos.x -= e.movementX;
+        cam.pos.y -= e.movementY;
     }
 };
 
 onwheel = e => {
-    cam.pos.x -= e.deltaX;
-    cam.pos.y -= e.deltaY;
+    cam.pos.x += e.deltaX;
+    cam.pos.y += e.deltaY;
 }
 
 update();
