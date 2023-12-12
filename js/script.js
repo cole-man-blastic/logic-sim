@@ -47,6 +47,11 @@ onmousemove  = e => {
     }
 };
 
+onwheel = e => {
+    cam.pos.x -= e.deltaX;
+    cam.pos.y -= e.deltaY;
+}
+
 update();
 
 function update() {
