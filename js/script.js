@@ -8,10 +8,14 @@ class V2D {
         this.x = x;
         this.y = y;
     }
+
+    static get origin() {
+        return new V2D(0, 0);
+    }
 }
 
 const cam = {
-    pos: new V2D(0, 0),
+    pos: V2D.origin,
     zoom: 1
 };
 
