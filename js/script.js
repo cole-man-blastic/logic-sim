@@ -42,8 +42,8 @@ onmousedown = e => isBackgroundDrag = true;
 onmouseup = e => isBackgroundDrag = false;
 onmousemove  = e => {
     if (isBackgroundDrag) {
-        cam.pos.x -= e.movementX;
-        cam.pos.y -= e.movementY;
+        cam.pos.x += e.movementX;
+        cam.pos.y += e.movementY;
     }
 };
 
